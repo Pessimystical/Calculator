@@ -1,0 +1,60 @@
+import java.util.Scanner;
+
+public class Calculator {
+
+	public static Scanner scan;
+	public static int num1, num2, input;
+
+	public static void main(String[] args) {
+		run();
+	}
+
+	public static void run() {
+		System.out.println("Hello, i am a Calculator, please input method of arithmatic:");
+		System.out.println("1 for add, 2 for subtract, 3 for multiply, and 4 for divide");
+		scan = new Scanner(System.in);
+		input = scan.nextInt();
+		if (input == 1) {
+			System.out.println("you selected addition, please choose two numbers to add:");
+			System.out.println("Number 1: ");
+			num1 = scan.nextInt();
+			System.out.println("Number 2: ");
+			num2 = scan.nextInt();
+			System.out.println(num1 + num2);
+		}
+		if (input == 2) {
+			System.out.println("you selected subtraction, please choose two numbers to subtract:");
+			System.out.println("Number 1: ");
+			num1 = scan.nextInt();
+			System.out.println("Number 2: ");
+			num2 = scan.nextInt();
+			System.out.println(num1 - num2);
+		}
+		if (input == 3) {
+			System.out.println("you selected multiplication, please choose two numbers to multiply:");
+			System.out.println("Number 1: ");
+			num1 = scan.nextInt();
+			System.out.println("Number 2: ");
+			num2 = scan.nextInt();
+			System.out.println(num1 * num2);
+		}
+		if (input == 4) {
+			System.out.println("you selected division, please choose two numbers to divide:");
+			System.out.println("Number 1: ");
+			num1 = scan.nextInt();
+			System.out.println("Number 2: ");
+			num2 = scan.nextInt();
+			System.out.println(num1 / num2);
+		}
+		System.out.println("would you like to arithmatic something else? (1 for yes, 2 for no)");
+		input = scan.nextInt();
+		if (input == 1) {
+			run();
+		}
+		if (input == 2) {
+			System.out.println("Goodbye!");
+		}
+
+	}
+
+}
