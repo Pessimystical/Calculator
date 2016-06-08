@@ -1,0 +1,86 @@
+//made by ThomasBear
+
+//if you're going to use any utilities, they have to be imported first!
+//Scanner will allow user input data(though you have to tell it if you want
+//integers or strings!)
+import java.util.Scanner;
+
+//every single actual piece goes inside the big public class
+public class Calculator2 {
+	// the first thing to do is allocate variables, so you can assign input data
+	// to them
+	public static Scanner scan;
+	public static int num1, num2, input, inputR;
+
+	public static void main(String[] args) {
+		// so basically, inputR(Run) is telling the while loop to loop as a
+		// default.
+		inputR = 1;
+		while (inputR == 1) {
+			System.out.println("Hello! I am a calculator, please input method of arithmatic:");
+			System.out.println("1 for add, 2 for subtract, 3 for multiply, and 4 for divide");
+			scan = new Scanner(System.in);
+			input = scan.nextInt();
+
+			if (input == 1) {
+				add();
+			}
+			if (input == 2) {
+				sub();
+			}
+			if (input == 3) {
+				multi();
+			}
+			if (input == 4) {
+				devi();
+			}
+			// This is asking if you want to do something else, assigning inputR
+			// to 2 will make the while loop stop.
+			System.out.println("would you like to arithmatic something else? (1 for yes, 2 for no)");
+			inputR = scan.nextInt();
+
+		}
+		System.out.print("Goodbye!");
+	}
+
+	// Methods are areas of a program that can be called upon many times. Magic!
+	// all these methods are basically the same, except they do
+	// different operations
+	public static void add() {
+		System.out.println("you selected addition, please choose two numbers to add:");
+		System.out.println("Number 1: ");
+		num1 = scan.nextInt();
+		System.out.println("Number 2: ");
+		num2 = scan.nextInt();
+		System.out.println(num1 + num2);
+
+	}
+
+	public static void sub() {
+		System.out.println("you selected subtraction, please choose two numbers to subtract:");
+		System.out.println("Number 1: ");
+		num1 = scan.nextInt();
+		System.out.println("Number 2: ");
+		num2 = scan.nextInt();
+		System.out.println(num1 - num2);
+
+	}
+
+	public static void multi() {
+		System.out.println("you selected multiplication, please choose two numbers to multiply:");
+		System.out.println("Number 1: ");
+		num1 = scan.nextInt();
+		System.out.println("Number 2: ");
+		num2 = scan.nextInt();
+		System.out.println(num1 * num2);
+	}
+
+	public static void devi() {
+		System.out.println("you selected division, please choose two numbers to divide:");
+		System.out.println("Number 1: ");
+		num1 = scan.nextInt();
+		System.out.println("Number 2: ");
+		num2 = scan.nextInt();
+		System.out.println(num1 / num2);
+	}
+}
